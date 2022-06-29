@@ -1,0 +1,56 @@
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.temperature {
+    font-size: 3rem;
+    font-weight: 600;
+    color: black;
+}
+
+.weather-icon {
+	width: 70px;
+	height: 70px;
+}
+
+.description {
+    font-weight: 600;
+}
+
+.wind::before {
+	display: block;
+	opacity: 0.6;
+	width: 1.3em;
+	height: 1.3em;
+	margin-right: 0.5em;
+	content: url("https://img.icons8.com/small/25/FFFFFF/wind.png");
+}
+
+.humidity::before {
+	display: block;
+	opacity: 0.6;
+	width: 1.3em;
+	height: 1.3em;
+	margin-right: 0.5em;
+	content: url("https://img.icons8.com/small/25/FFFFFF/barometer-gauge.png");
+}
+
+.pressure::before {
+	display: block;
+	opacity: 0.6;
+	width: 1.3em;
+	height: 1.3em;
+	margin-right: 0.5em;
+	content: url("https://img.icons8.com/small/25/FFFFFF/humidity.png");
+}
+
+
+.link {
+	color: #242F9B;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}

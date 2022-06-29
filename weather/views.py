@@ -2,7 +2,7 @@ from django.shortcuts import render
 import requests
 from datetime import datetime
 
-API_KEY = 'b23164b6b608a3f5c35ca3deb487c738'
+API_KEY = 'your-api-key'
 
 def get_weather_info(cityname: str):
     url = f'https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={API_KEY}&units=metric'

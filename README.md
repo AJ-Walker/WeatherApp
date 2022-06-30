@@ -34,6 +34,12 @@
    pip install -r requirements.txt
    ```
 
+4. Adding Environment Variables
+   
+   * Open **.env.example** file from **WeatherApp** folder
+   * Add the Django secret key and OpenWeather API Key in the file
+   * Rename the file from .env.example to .env
+
 4. Running Django server
 
    ```

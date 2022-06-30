@@ -1,8 +1,7 @@
 from django.shortcuts import render
 import requests
 from datetime import datetime
-
-API_KEY = 'your-api-key'
+from WeatherApp.settings import API_KEY
 
 def get_weather_info(cityname: str):
     url = f'https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={API_KEY}&units=metric'
@@ -16,8 +15,12 @@ def index(request):
         cityname = request.POST.get('city')
 
         data = get_weather_info(cityname)
+        print(data)
 
-        if data['cod'] == '404':
+        if data['cod'] == 401:
+            error = data['message']
+            return render(request, 'weather/index.html', {'error': error})
+        elif data['cod'] == '404':
             error = 'City not found'
             return render(request, 'weather/index.html', {'error': error})
         else:

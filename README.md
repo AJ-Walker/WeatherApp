@@ -1,4 +1,4 @@
-## Django Weather API
+## Django Weather APP
 
 ## Getting Started
 
